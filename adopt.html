@@ -1,0 +1,78 @@
+<!-- Name: Muhammad Saad Baloch -->
+<!-- Roll Number: i263147 -->
+<!-- Section: SE-C -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Adopt a Pet - Application</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav class="navbar">
+        <a href="index.html">Home</a>
+        <a href="care.html">Care &amp; Matchmaker</a>
+        <a href="adopt.html" class="active">Adopt Now</a>
+        <a href="gallery.html">Pet Gallery</a>
+        <a href="donate.html">Donate</a>
+        <a href="about.html">About &amp; FAQ</a>
+    </nav>
+
+    <h1>ADOPTION APPLICATION</h1>
+    <p class="subtitle">Complete the form below to reserve your new furry family member.</p>
+
+    <div class="interactive-panel">
+        <form id="adoptionForm" onsubmit="submitApplication(event)">
+            <div class="form-group">
+                <label for="selectedPet">Select Pet to Adopt:</label>
+                <select id="selectedPet" required>
+                    <option value="Max">Max (3 months - German Shepherd)</option>
+                    <option value="Bella">Bella (1 year - French Bulldog)</option>
+                    <option value="Cooper">Cooper (2 years - Golden Retriever)</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="adopterName">Your Full Name:</label>
+                <input type="text" id="adopterName" placeholder="Enter your full name" required>
+            </div>
+
+            <div class="form-group">
+                <label for="adopterEmail">Email Address:</label>
+                <input type="email" id="adopterEmail" placeholder="you@example.com" required>
+            </div>
+
+            <div class="form-group">
+                <label for="adopterPhone">Phone Number:</label>
+                <input type="tel" id="adopterPhone" placeholder="e.g., 0300-1234567" required>
+            </div>
+
+            <div class="form-group">
+                <label for="homeType">Your Living Environment:</label>
+                <select id="homeType" required>
+                    <option value="House with Yard">House with Yard</option>
+                    <option value="Apartment">Apartment</option>
+                    <option value="Farmhouse / Open Space">Farmhouse / Open Space</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="adoptionReason">Why do you want to adopt this pet?</label>
+                <textarea id="adoptionReason" rows="4" placeholder="Tell us a bit about your home and experience with pets..." required></textarea>
+            </div>
+
+            <button type="submit">Submit Adoption Request</button>
+        </form>
+
+        <!-- Confirmation Receipt Displayed After Submission -->
+        <div id="confirmationReceipt" class="result-card" style="display: none;"></div>
+    </div>
+
+    <footer>
+        <p>Created by Muhammad Saad Baloch | Roll No: i263147 | Section: SE-C</p>
+    </footer>
+
+    <script src="javascript.js"></script>
+</body>
+</html>

@@ -1,0 +1,76 @@
+<!-- Name: Muhammad Saad Baloch -->
+<!-- Roll Number: i263147 -->
+<!-- Section: SE-C -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pet Adoption Website - Home</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav class="navbar">
+        <a href="index.html" class="active">Home</a>
+        <a href="care.html">Care &amp; Matchmaker</a>
+        <a href="adopt.html">Adopt Now</a>
+        <a href="gallery.html">Pet Gallery</a>
+        <a href="donate.html">Donate</a>
+        <a href="about.html">About &amp; FAQ</a>
+    </nav>
+
+    <h1>PET ADOPTION WEBSITE</h1>
+    <p class="subtitle">Find your loyal best friend today. Filter below or click Adopt Me to begin!</p>
+
+    <!-- Interactive Filter & Search Controls -->
+    <div class="controls-box">
+        <input type="text" id="petSearchInput" onkeyup="filterPets()" placeholder="Search by name or breed (e.g., Max, Bulldog)...">
+        <div class="filter-buttons">
+            <button type="button" onclick="setCategoryFilter('all')">All Pets</button>
+            <button type="button" onclick="setCategoryFilter('puppy')">Puppies (&lt; 1 Year)</button>
+            <button type="button" onclick="setCategoryFilter('adult')">Adults (1+ Years)</button>
+            <button type="button" onclick="resetAllAdoptions()" class="secondary-btn">Reset Adoption Status</button>
+        </div>
+    </div>
+
+    <!-- Pet 1: Max -->
+    <div class="pet-card" data-name="Max" data-breed="German shepherd" data-category="puppy">
+        <span class="status-badge" id="badge-Max">Available</span>
+        <img src="https://gsdca.org/wp-content/uploads/2026/06/Puppies-9.jpg" onerror="this.onerror=null; this.src='Pet1.jpg';" alt="Pet 1 image">
+        <h3>Name: Max</h3>
+        <h3>Age: 3 months</h3>
+        <h3>Breed: German shepherd</h3>
+        <button id="btn-Max" onclick="selectPetForAdoption('Max')">Adopt Me</button>
+    </div>
+    <hr>
+
+    <!-- Pet 2: Bella -->
+    <div class="pet-card" data-name="Bella" data-breed="French Bulldog" data-category="adult">
+        <span class="status-badge" id="badge-Bella">Available</span>
+        <img src="https://frenchbulldogsla.com/wp-content/uploads/2024/03/IMG_2901.jpeg" onerror="this.onerror=null; this.src='Pet 2.jpeg';" alt="Pet 2 image">
+        <h3>Name: Bella</h3>
+        <h3>Age: 1 year</h3>
+        <h3>Breed: French Bulldog</h3>
+        <button id="btn-Bella" onclick="selectPetForAdoption('Bella')">Adopt Me</button>
+    </div>
+    <hr>
+
+    <!-- Pet 3: Cooper -->
+    <div class="pet-card" data-name="Cooper" data-breed="Golden Retriever" data-category="adult">
+        <span class="status-badge" id="badge-Cooper">Available</span>
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTTM2S4Jm4egyfAe5mAonkHefuJRi0YBIAnOBgq96vUlvzxVWyWwW4KJdZE&s=10" onerror="this.onerror=null; this.src='Pet 3.jpg';" alt="Pet 3 image">
+        <h3>Name: Cooper</h3>
+        <h3>Age: 2 years</h3>
+        <h3>Breed: Golden Retriever</h3>
+        <button id="btn-Cooper" onclick="selectPetForAdoption('Cooper')">Adopt Me</button>
+    </div>
+
+    <p id="noPetsMsg" class="hidden-msg">No pets match your current filter. Try clicking "All Pets".</p>
+
+    <footer>
+        <p>Created by Muhammad Saad Baloch | Roll No: i263147 | Section: SE-C</p>
+    </footer>
+
+    <script src="javascript.js"></script>
+</body>
+</html>

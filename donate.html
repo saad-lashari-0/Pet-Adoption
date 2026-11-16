@@ -1,0 +1,73 @@
+<!-- Name: Muhammad Saad Baloch -->
+<!-- Roll Number: i263147 -->
+<!-- Section: SE-C -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Donate &amp; Sponsor a Pet</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav class="navbar">
+        <a href="index.html">Home</a>
+        <a href="care.html">Care &amp; Matchmaker</a>
+        <a href="adopt.html">Adopt Now</a>
+        <a href="gallery.html">Pet Gallery</a>
+        <a href="donate.html" class="active">Donate</a>
+        <a href="about.html">About &amp; FAQ</a>
+    </nav>
+
+    <h1>SPONSOR &amp; DONATE</h1>
+    <p class="subtitle">Help provide food, toys, and medical care for Max, Bella, and Cooper!</p>
+
+    <div class="interactive-panel">
+        <h3>Shelter Supply Goal: $<span id="totalDonated">150</span> / $500</h3>
+        <div class="progress-container">
+            <div class="progress-bar" id="donationProgressBar" style="width: 30%;">30%</div>
+        </div>
+
+        <form id="donationForm" onsubmit="submitDonation(event)">
+            <div class="form-group">
+                <label for="sponsorPet">Choose a Pet to Sponsor:</label>
+                <select id="sponsorPet" required>
+                    <option value="All Shelter Pets">All Shelter Pets</option>
+                    <option value="Max">Max (German Shepherd)</option>
+                    <option value="Bella">Bella (French Bulldog)</option>
+                    <option value="Cooper">Cooper (Golden Retriever)</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label>Quick Amount Selection ($):</label>
+                <div class="filter-buttons">
+                    <button type="button" onclick="setDonationAmount(10)">$10</button>
+                    <button type="button" onclick="setDonationAmount(25)">$25</button>
+                    <button type="button" onclick="setDonationAmount(50)">$50</button>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="donationAmount">Donation Amount ($):</label>
+                <input type="number" id="donationAmount" min="1" placeholder="Enter amount in USD" required>
+            </div>
+
+            <div class="form-group">
+                <label for="donorName">Your Name:</label>
+                <input type="text" id="donorName" placeholder="Enter your name" required>
+            </div>
+
+            <button type="submit">Complete Sponsorship</button>
+        </form>
+
+        <div id="donationReceipt" class="result-card" style="display: none;"></div>
+    </div>
+
+    <footer>
+        <p>Created by Muhammad Saad Baloch | Roll No: i263147 | Section: SE-C</p>
+    </footer>
+
+    <script src="javascript.js"></script>
+</body>
+</html>

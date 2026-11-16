@@ -1,0 +1,83 @@
+<!-- Name: Muhammad Saad Baloch -->
+<!-- Roll Number: i263147 -->
+<!-- Section: SE-C -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us &amp; FAQ</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav class="navbar">
+        <a href="index.html">Home</a>
+        <a href="care.html">Care &amp; Matchmaker</a>
+        <a href="adopt.html">Adopt Now</a>
+        <a href="gallery.html">Pet Gallery</a>
+        <a href="donate.html">Donate</a>
+        <a href="about.html" class="active">About &amp; FAQ</a>
+    </nav>
+
+    <h1>ABOUT OUR SHELTER</h1>
+    <p class="subtitle">Dedicated to connecting loving families with healthy, happy dogs.</p>
+
+    <div class="interactive-panel">
+        <h3>Our Mission</h3>
+        <p>Every dog at our shelter receives complete vaccinations, personalized nutrition, and daily socialization before finding their forever home.</p>
+    </div>
+
+    <hr>
+
+    <!-- Interactive Collapsible FAQ Accordion -->
+    <div class="interactive-panel">
+        <h3>Frequently Asked Questions (Click to Expand)</h3>
+
+        <div class="faq-item">
+            <button type="button" class="faq-question" onclick="toggleFaq(0)">1. Are all pets vaccinated before adoption?</button>
+            <div class="faq-answer">
+                <p>Yes! Max, Bella, and Cooper have all received their age-appropriate vaccinations and full veterinary checkups.</p>
+            </div>
+        </div>
+
+        <div class="faq-item">
+            <button type="button" class="faq-question" onclick="toggleFaq(1)">2. Is there an adoption fee?</button>
+            <div class="faq-answer">
+                <p>We charge a modest $50 adoption contribution that covers microchipping, collar tags, and starter food.</p>
+            </div>
+        </div>
+
+        <div class="faq-item">
+            <button type="button" class="faq-question" onclick="toggleFaq(2)">3. Can I visit the shelter before submitting a form?</button>
+            <div class="faq-answer">
+                <p>Absolutely! Visitors are welcome Monday through Saturday from 10:00 AM to 6:00 PM.</p>
+            </div>
+        </div>
+    </div>
+
+    <hr>
+
+    <!-- Interactive Contact Inquiry Form -->
+    <div class="interactive-panel">
+        <h3>Send Us a Quick Question</h3>
+        <form id="contactForm" onsubmit="submitContactMessage(event)">
+            <div class="form-group">
+                <label for="contactName">Your Name:</label>
+                <input type="text" id="contactName" placeholder="Enter your name" required>
+            </div>
+            <div class="form-group">
+                <label for="contactMsg">Your Message:</label>
+                <textarea id="contactMsg" rows="3" placeholder="Ask about visiting hours, pet health, etc." required></textarea>
+            </div>
+            <button type="submit">Send Message</button>
+        </form>
+        <div id="contactFeedback" class="result-card" style="display: none;"></div>
+    </div>
+
+    <footer>
+        <p>Created by Muhammad Saad Baloch | Roll No: i263147 | Section: SE-C</p>
+    </footer>
+
+    <script src="javascript.js"></script>
+</body>
+</html>
