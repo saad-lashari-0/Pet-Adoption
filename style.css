@@ -1,0 +1,44 @@
+/* Name: Muhammad Saad Baloch */
+/* Roll Number: i263147
+/* Section: SE-C --> */
+body {
+    background-color: brown;
+}
+h1 {
+    text-align: center;
+    color: white;
+    font-size: 70px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+hr{
+    margin-bottom: 50px;
+}
+img {
+    margin-top: 2%;
+    align-self: center;
+    display: block; 
+    margin-left: auto;
+    margin-right: auto;
+    width: 300px;
+    height: auto;
+}
+h3 {
+    color: darkseagreen;
+    text-align: center;
+    font-size: 30px;
+}
+button{
+  display: block;
+  margin-inline: auto; 
+  font-size: 20px;
+  background-color: pink;
+}
+table {
+    width: 60%; 
+  border-collapse: collapse;
+  margin-top: 2%;
+}
+td,th{
+    text-align: center;
+    border: 1px solid #333333;
+}
