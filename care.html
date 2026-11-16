@@ -1,0 +1,121 @@
+<!-- Name: Muhammad Saad Baloch -->
+<!-- Roll Number: i263147 -->
+<!-- Section: SE-C -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pet Care &amp; Diet Guide</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav class="navbar">
+        <a href="index.html">Home</a>
+        <a href="care.html" class="active">Care &amp; Matchmaker</a>
+        <a href="adopt.html">Adopt Now</a>
+        <a href="gallery.html">Pet Gallery</a>
+        <a href="about.html">About &amp; FAQ</a>
+    </nav>
+
+    <h1>PET CARE &amp; DIET GUIDE</h1>
+    <p class="subtitle">Explore daily nutrition, favorite games, and find your ideal companion.</p>
+
+    <!-- Original Lab Table Enhanced with Search -->
+    <div class="controls-box">
+        <input type="text" id="tableSearchInput" onkeyup="searchDietTable()" placeholder="Filter diet table by pet, food, or game...">
+    </div>
+
+    <table id="dietTable">
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Diet</th>
+                <th>Favourite Game</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Max</td>
+                <td>Lamb &amp; oatmeal large-breed formula</td>
+                <td>Treat hide-and-seek</td>
+            </tr>
+            <tr>
+                <td>Bella</td>
+                <td>Grain-free chicken &amp; pea food</td>
+                <td>Tug-of-war</td>
+            </tr>
+            <tr>
+                <td>Cooper</td>
+                <td>Salmon &amp; brown rice kibble</td>
+                <td>Fetch</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <hr>
+
+    <!-- Interactive Pet Matchmaker Quiz -->
+    <div class="interactive-panel">
+        <h3>Find Your Best Pet Match</h3>
+        <form id="matchQuizForm">
+            <div class="form-group">
+                <label for="activityLevel">1. How active is your daily routine?</label>
+                <select id="activityLevel">
+                    <option value="high">Very active (long runs &amp; training)</option>
+                    <option value="moderate">Moderately active (daily park walks)</option>
+                    <option value="relaxed">Relaxed (short walks &amp; indoor play)</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="livingSpace">2. What is your home size?</label>
+                <select id="livingSpace">
+                    <option value="yard">House with a large yard</option>
+                    <option value="medium">Medium house or townhome</option>
+                    <option value="apartment">Cozy apartment</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="petAgePref">3. Do you prefer a puppy or a grown dog?</label>
+                <select id="petAgePref">
+                    <option value="puppy">Energetic Puppy</option>
+                    <option value="adult">Trained Adult Dog</option>
+                </select>
+            </div>
+
+            <button type="button" onclick="recommendPet()">Find My Match</button>
+        </form>
+        <div id="quizResultBox" class="result-card" style="display: none;"></div>
+    </div>
+
+    <hr>
+
+    <!-- Monthly Care & Food Cost Estimator -->
+    <div class="interactive-panel">
+        <h3>Monthly Pet Care Cost Estimator</h3>
+        <div class="form-group">
+            <label for="calcPetSelect">Choose a Pet:</label>
+            <select id="calcPetSelect">
+                <option value="Max">Max (German Shepherd - Puppy)</option>
+                <option value="Bella">Bella (French Bulldog - 1 yr)</option>
+                <option value="Cooper">Cooper (Golden Retriever - 2 yrs)</option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label>
+                <input type="checkbox" id="includeGrooming"> Include Monthly Grooming &amp; Toy Pack (+$35)
+            </label>
+        </div>
+        <button type="button" onclick="calculateCareCost()">Calculate Monthly Budget</button>
+        <div id="costResultBox" class="result-card" style="display: none;"></div>
+    </div>
+
+    <footer>
+        <p>Created by Muhammad Saad Baloch | Roll No: i263147 | Section: SE-C</p>
+    </footer>
+
+    <script src="javascript.js"></script>
+</body>
+</html>
