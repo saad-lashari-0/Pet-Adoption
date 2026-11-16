@@ -1,0 +1,62 @@
+<!-- Name: Muhammad Saad Baloch -->
+<!-- Roll Number: i263147 -->
+<!-- Section: SE-C -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pet Gallery - Photo Showcase</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav class="navbar">
+        <a href="index.html">Home</a>
+        <a href="care.html">Care &amp; Matchmaker</a>
+        <a href="adopt.html">Adopt Now</a>
+        <a href="gallery.html" class="active">Pet Gallery</a>
+        <a href="about.html">About &amp; FAQ</a>
+    </nav>
+
+    <h1>PET PHOTO GALLERY</h1>
+    <p class="subtitle">Click any photo to enlarge, or click Like to vote for your favorite pup!</p>
+
+    <div class="gallery-grid">
+        <div class="gallery-item">
+            <img src="https://gsdca.org/wp-content/uploads/2026/06/Puppies-9.jpg" onerror="this.onerror=null; this.src='Pet1.jpg';" alt="Max" onclick="openLightbox(this.src, 'Max - 3 Month Old German Shepherd Puppy')">
+            <h3>Max</h3>
+            <p>Loves treat hide-and-seek &amp; outdoor adventures.</p>
+            <button type="button" onclick="likePet('Max')">&#9829; Like (<span id="likes-Max">12</span>)</button>
+        </div>
+
+        <div class="gallery-item">
+            <img src="https://frenchbulldogsla.com/wp-content/uploads/2024/03/IMG_2901.jpeg" onerror="this.onerror=null; this.src='Pet 2.jpeg';" alt="Bella" onclick="openLightbox(this.src, 'Bella - 1 Year Old French Bulldog')">
+            <h3>Bella</h3>
+            <p>Playful tug-of-war champion and cuddle expert.</p>
+            <button type="button" onclick="likePet('Bella')">&#9829; Like (<span id="likes-Bella">18</span>)</button>
+        </div>
+
+        <div class="gallery-item">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTTM2S4Jm4egyfAe5mAonkHefuJRi0YBIAnOBgq96vUlvzxVWyWwW4KJdZE&s=10" onerror="this.onerror=null; this.src='Pet 3.jpg';" alt="Cooper" onclick="openLightbox(this.src, 'Cooper - 2 Year Old Golden Retriever')">
+            <h3>Cooper</h3>
+            <p>Gentle soul who never gets tired of playing fetch.</p>
+            <button type="button" onclick="likePet('Cooper')">&#9829; Like (<span id="likes-Cooper">24</span>)</button>
+        </div>
+    </div>
+
+    <!-- Interactive Lightbox Modal -->
+    <div id="lightboxModal" class="modal" onclick="closeLightbox()">
+        <div class="modal-content" onclick="event.stopPropagation()">
+            <span class="close-btn" onclick="closeLightbox()">&times;</span>
+            <img id="lightboxImg" src="" alt="Enlarged Pet Photo">
+            <h3 id="lightboxCaption"></h3>
+        </div>
+    </div>
+
+    <footer>
+        <p>Created by Muhammad Saad Baloch | Roll No: i263147 | Section: SE-C</p>
+    </footer>
+
+    <script src="javascript.js"></script>
+</body>
+</html>
